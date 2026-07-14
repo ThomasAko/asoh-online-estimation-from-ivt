@@ -1,4 +1,4 @@
-ld-system]
+[build-system]
 requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
@@ -14,6 +14,5 @@ dependencies = [
     "matplotlib",
     "tqdm",
     "battery-data-toolkit",
-
     "auto-soh @ git+https://github.com/ROVI-org/auto-soh.git",
 ]
