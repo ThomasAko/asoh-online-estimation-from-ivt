@@ -14,5 +14,8 @@ dependencies = [
     "matplotlib",
     "tqdm",
     "battery-data-toolkit",
-    "auto-soh @ git+https://github.com/ROVI-org/auto-soh.git",
+    "moirae @ git+https://github.com/ROVI-org/auto-soh.git",
 ]
+
+[tool.setuptools]
+packages = ["Utils"]
