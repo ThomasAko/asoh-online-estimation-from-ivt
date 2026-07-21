@@ -5,17 +5,21 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "battery-estimation"
 version = "0.1.0"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 
 dependencies = [
-    "numpy",
-    "pandas",
-    "scipy",
-    "matplotlib",
-    "tqdm",
-    "battery-data-toolkit",
-    "moirae @ git+https://github.com/ROVI-org/auto-soh.git",
+    "numpy>=2.5",
+    "pandas>=2.2",
+    "scipy>=1.16",
+    "matplotlib>=3.9",
+    "tables>=3.18",
+    "typing_extensions>=4.12",
+    "battery-data-toolkit @ git+https://github.com/ROVI-org/battery-data-toolkit.git@19961e6bbb2d0cfe0bff9c129144fcf8f3dd3be6",
+    "moirae @ git+https://github.com/ROVI-org/auto-soh.git@949c3b674974269bd20dab94670adfa8bb3fcb40",
 ]
 
-[tool.setuptools]
-packages = ["Utils"]
+[project.optional-dependencies]
+notebook = ["jupyterlab", "ipython"
+
+[tool.setuptools.packages.find]
+include = ["utils*"]
